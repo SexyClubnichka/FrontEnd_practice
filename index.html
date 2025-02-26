@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика з веб-програмування</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .task {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+        .task a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .task a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Звіт з практики на робочому місці</h1>
+</header>
+
+<main>
+    <section id="section1" class="task">
+        <h2>Завдання 1: Створення форми з кнопкою та JavaScript</h2>
+        <p>Це завдання демонструє створення форми з кнопкою, яка при натисканні виконує JavaScript функцію для перенаправлення на інший сайт.</p>
+        <form id="myForm" onsubmit="return redirectToSite(event)">
+            <label for="url">Введіть URL:</label>
+            <input type="text" id="url" name="url" placeholder="https://panasjukirina.wordpress.com/класи/клас-11/модуль-веб-дизайн/урок-25-веб-програмування-та-інтерактив/">
+            <button type="submit">Перейти за посиланням</button>
+        </form>
+    </section>
+
+    <section id="section2" class="task">
+        <h2>Завдання 2: Гіперпосилання для переходу по сторінках</h2>
+        <p>Створюється гіперпосилання для переходу на інші сторінки або частини цієї сторінки.</p>
+        <a href="#section1">Перейти до Завдання 1</a><br>
+        <a href="#section3">Перейти до Завдання 3</a>
+    </section>
+
+    <section id="section3" class="task">
+        <h2>Завдання 3: Використання фреймів для структурування контенту</h2>
+        <p>Це завдання демонструє використання фреймів для поділу контенту на кілька частин. У цьому випадку, це сайт з уроком веб-програмування.</p>
+        <iframe src="https://panasjukirina.wordpress.com/класи/клас-11/модуль-веб-дизайн/урок-25-веб-програмування-та-інтерактив/" width="600" height="400" title="Урок з веб-програмування"></iframe>
+    </section>
+
+    <section class="task">
+        <h2>Завдання 4: Створення навігаційної карти</h2>
+        <p>Використовуємо гіперпосилання для навігації між різними частинами сайту.</p>
+        <ul>
+            <li><a href="#section1">Завдання 1</a></li>
+            <li><a href="#section2">Завдання 2</a></li>
+            <li><a href="#section3">Завдання 3</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 - Практика з веб-програмування</p>
+</footer>
+
+<script>
+    function redirectToSite(event) {
+        event.preventDefault();
+        var url = document.getElementById('url').value;
+        if (url) {
+            window.location.href = url;
+        } else {
+            alert('Будь ласка, введіть правильне URL');
+        }
+    }
+</script>
+
+</body>
+</html>
